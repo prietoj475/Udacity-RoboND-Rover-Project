@@ -2,7 +2,7 @@
 
 # Notebook Analysis
 
-### find_rocks()
+## find_rocks()
 
 the rocks color spectrum was found to be above 100 for red, and green, while the blue had a limit of 50. the find_rocks() function is simply a copy of color_thresh() with a different RGB threshold = [110,110,50] and adjustment to the Boolean array for blue to be less than 50. To mark the world map with the rocks position I performed coordinate transforms then applied them to the world map. The rocks are highlighted white at magnitude of 250. 
 
