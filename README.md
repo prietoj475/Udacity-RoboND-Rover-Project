@@ -5,15 +5,13 @@
 ## find_rocks()
 The rocks color spectrum was found to be above 100 for red, and green, while the blue had a limit of 50. The find_rocks() function is simply a copy of color_thresh() with a different RGB threshold = [110,110,50] and adjustment to the Boolean array for blue to be less than 50. To mark the world map with the rocks position I performed coordinate transforms then applied them to the world map. The rocks are highlighted white with a magnitude of 250. 
 
-![alt text](/Images/color_rock.png "rock threshed")
+![alt text](https://github.com/prietoj475/Udacity-RoboND-Rover-Project/blob/master/Images/color%20rock.png)
 
 ## Obstacle location
 To highlight the obstacles in the world map I inverted the binary output of the color_thresh() function. The obstacle location is applied to the world map using the same coordinate transforms steps as the path terrain. 
 
 ## Mapping Accuracy
 To increase the accuracy of the world map. I set the obstacle pixel magnitude +1 red, and the path pixels to +10 blue. As the rover does multiple passes over the same area one of colors will begin to exceed the other. A check will occur if one color exceeds the other the lesser will be set to zero. By adding these steps my world map accuracy went from 61% to 97%.
-
-![alt text 1](/Images/test_mapping.mp4 "video")
 
 # Autonomous Navigation and Mapping
 
